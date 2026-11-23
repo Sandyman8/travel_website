@@ -1,0 +1,322 @@
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f7f9fa;
+    color: #253746;
+}
+
+/* HEADER */
+header {
+    background-color: white;
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #087f8c;
+}
+
+.search input {
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #087f8c;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #055b65;
+}
+
+/* NAVIGATION */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #253746;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #087f8c;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 480px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)),
+        url("./backk.jpg") center/cover no-repeat;
+        
+
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    color: white;
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #70e1d0;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #087f8c;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.explore-btn:hover {
+    background-color: #055b65;
+}
+
+/* SEARCH SECTION */
+.search-section {
+    text-align: center;
+    padding: 45px 5%;
+}
+
+.search-section h2 {
+    margin-bottom: 25px;
+}
+
+.filter-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 15px #44393912;
+
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-box input,
+.filter-box select {
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    min-width: 180px;
+}
+
+/* GENERAL CONTAINER */
+.container {
+    padding: 50px 7%;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+/* CARD LAYOUT */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #00000012;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-content span,
+.restaurant-box span {
+    color: #d49a25;
+    font-weight: bold;
+}
+
+/* RESTAURANTS */
+.restaurant-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.restaurant-box div {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.restaurant-box h3 {
+    margin-bottom: 10px;
+}
+
+.restaurant-box p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+
+/* ABOUT */
+.about {
+    background-color: #087f8c;
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+/* FOOTER */
+footer {
+    background-color: #172e3b;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    line-height: 2;
+}
+
+/* TABLET RESPONSIVENESS */
+@media (max-width: 900px) {
+
+    header {
+        justify-content: center;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .restaurant-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search input {
+        width: 65%;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 35px 7%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .filter-box {
+        flex-direction: column;
+    }
+
+    .filter-box input,
+    .filter-box select,
+    .filter-box button {
+        width: 100%;
+    }
+
+    .card-container,
+    .restaurant-box {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+}
